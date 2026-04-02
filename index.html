@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EJP Porto-Novo — Une expérience</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<!-- Arrière-plan animé (canvas) -->
+<canvas id="bg-canvas"></canvas>
+
+<!-- Overlay d'effet WOW au passage LIVE -->
+<div id="wow-overlay"></div>
+
+
+<!-- APPLICATION PRINCIPALE -->
+<main class="app" id="app">
+
+  <!-- LOGO -->
+  <div class="logo-wrap">
+    
+    <img class="logo-img" src="img/ejp-logo.jpg" alt="Logo EJP Porto-Novo" onerror="this.style.display='none'; document.getElementById('logo-placeholder').style.display='flex';">
+
+    <div class="church-name">
+      <h1>Expérience_Jeune</h1>
+      <span>Youth Marvel's squad</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- BADGE D'ÉTAT -->
+  <div class="status-badge" id="statusBadge">
+    <div class="badge-dot"></div>
+    <span id="statusText">Rendez-vous dans</span>
+  </div>
+
+  <!-- LABEL COUNTDOWN -->
+  <div class="countdown-label" id="countdownLabel"></div>
+
+  <!-- GRILLE COUNTDOWN -->
+  <div class="countdown-grid" id="countdownGrid">
+    <div class="time-card" id="card-j">
+      <div class="time-value" id="val-j">00</div>
+      <div class="time-label">Jours</div>
+    </div>
+    <div class="time-card" id="card-h">
+      <div class="time-value" id="val-h">00</div>
+      <div class="time-label">Heures</div>
+    </div>
+    <div class="time-card" id="card-m">
+      <div class="time-value" id="val-m">00</div>
+      <div class="time-label">Minutes</div>
+    </div>
+    <div class="time-card" id="card-s">
+      <div class="time-value" id="val-s">00</div>
+      <div class="time-label">Secondes</div>
+    </div>
+  </div>
+
+  <!-- DATE DU PROCHAIN CULTE -->
+  <div class="next-date" id="nextDate"></div>
+
+  <!-- BANNIÈRE LIVE (cachée jusqu'à 15h29) -->
+  <div class="live-banner" id="liveBanner">
+    <div class="live-icon">⛪</div>
+    <div class="live-title">🔴 CULTE EN COURS</div>
+    <div class="live-subtitle">Rejoignez-nous — 15h29 · 18h30</div>
+    <div class="live-progress">
+      <div class="live-progress-bar" id="liveProgressBar" style="width:0%"></div>
+    </div>
+  </div>
+
+  <!-- CARTE HORAIRE -->
+  <div class="schedule-card">
+    <div class="schedule-info">
+      <small>Viens vivre</small>
+      <p>l'Expérience</p>
+    </div>
+    <div class="schedule-time">
+      🕒 À partir de 15h29
+    </div>
+  </div>
+
+</main>
+
+<footer>© EJP Porto-Novo — Tous droits réservés</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
